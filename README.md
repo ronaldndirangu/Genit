@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Coverage Status](https://coveralls.io/repos/github/ronaldndirangu/Genit/badge.svg?branch=master)](https://coveralls.io/github/ronaldndirangu/Genit?branch=master)
 
 ## Genit
 
