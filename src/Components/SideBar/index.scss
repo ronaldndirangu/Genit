@@ -1,0 +1,18 @@
+.sidebar {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: calc(100vh - 6rem);
+  width: 18rem;
+  border: solid 1px #ccc;
+  padding: 1rem;
+
+  &-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #39298c;
+    font-weight: 400;
+  }
+}

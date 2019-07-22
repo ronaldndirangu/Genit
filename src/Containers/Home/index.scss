@@ -1,0 +1,11 @@
+.home {
+  display: flex;
+  flex-direction: row;
+
+  &-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: whitesmoke;
+  }
+}

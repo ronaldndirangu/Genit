@@ -1,0 +1,52 @@
+table {
+  font-family: monospace;
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 60rem;
+  box-shadow: 2px 4px 4px #ccc;
+  margin: 1rem;
+  background-color: #fff;
+}
+
+tbody {
+  display: block;
+  width: 100%;
+  height: 40rem;
+  overflow: auto;
+}
+
+td {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+th {
+  padding: 1rem;
+}
+
+table,
+th,
+td {
+  border-bottom: 1px solid #ccc;
+  border-collapse: collapse;
+}
+thead,
+tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed; /* even columns width , fix width of table too*/
+}
+
+th {
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #39298c99;
+}
+
+tr {
+  cursor: default;
+  transition: all 250ms ease-in-out 0s;
+  &:hover {
+    background-color: #39298c11;
+  }
+}

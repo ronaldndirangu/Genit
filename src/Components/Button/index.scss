@@ -1,0 +1,29 @@
+.button-primary {
+  background-color: #39298c;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.8rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: #39298c88;
+  }
+}
+
+button:disabled,
+button[disabled] {
+  cursor: not-allowed;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+
+  &:hover {
+    background-color: #cccccc;
+  }
+}
