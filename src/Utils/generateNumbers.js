@@ -1,6 +1,5 @@
 export default amount => {
   const numbers = [];
-
   if (amount > 0 && amount < 10001) {
     for (let i = 0; i < amount; i++) {
       const rand = Math.ceil(Math.random() * 100000000) + "";
