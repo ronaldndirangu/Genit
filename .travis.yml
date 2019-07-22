@@ -1,17 +1,19 @@
-sudo: false
 language: node_js
 node_js:
-  - "10"
-branches:
-  only:
-    - master
+  - "stable"
 cache:
   directories:
     - node_modules
-before_install:
-  - yarn upgrade
-install:
-  - yarn
+
+before_script:
+  - npm install codeclimate-test-reporter -g
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+  - npm install coveralls
+
 script:
-  - yarn test
-  - yarn run coveralls
+  - yarn test --coverage --coverageReporters=text-lcov | coveralls
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $REPO_TOKEN

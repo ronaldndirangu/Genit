@@ -12,8 +12,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "coveralls": "react-scripts test --coverage && cat ./tests/coverage/lcov.info | coveralls"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +34,12 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "react-test-renderer": "^16.8.6"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js, jsx, ts, tsx}",
+      "!src/serviceWorker.js",
+      "!src/index.js"
+    ]
   }
 }
