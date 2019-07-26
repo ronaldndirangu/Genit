@@ -6,7 +6,7 @@ const Input = ({ action, value }) => {
     <input
       className="input"
       value={value}
-      placeholder="Enter amount to be generated"
+      placeholder="Enter amount"
       onChange={e => action(e)}
     />
   );
