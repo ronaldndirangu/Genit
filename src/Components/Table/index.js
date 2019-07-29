@@ -1,7 +1,9 @@
 import React from "react";
 import "./index.scss";
+import CaretUp from "../../Styles/Icons/CaretUp";
+import CaretDown from "../../Styles/Icons/CaretDown";
 
-const Table = ({ numbers, handleSort }) => {
+const Table = ({ numbers, handleSort, asc }) => {
   return (
     <table>
       <thead>
@@ -9,6 +11,7 @@ const Table = ({ numbers, handleSort }) => {
           <th>Index</th>
           <th className="table-header__no" onClick={e => handleSort(e)}>
             Number
+            {!asc ? <CaretDown /> : <CaretUp />}
           </th>
         </tr>
       </thead>
