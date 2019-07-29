@@ -15,7 +15,8 @@ export default class Home extends Component {
   componentDidMount() {
     const numbers = JSON.parse(localStorage.getItem("numbers"));
     if (numbers && numbers.length > 0) {
-      this.setState({ numbers });
+      this.setState({ numbers: numbers.sort() });
+      this.setState({ asc: false });
     }
   }
 
@@ -23,7 +24,8 @@ export default class Home extends Component {
     e.preventDefault();
     const { amount } = this.state;
     const numbers = phoneNumberGenerator(amount);
-    this.setState({ numbers });
+    this.setState({ numbers: numbers.sort() });
+    this.setState({ asc: false });
     localStorage.setItem("numbers", JSON.stringify(numbers));
   };
 
@@ -45,7 +47,7 @@ export default class Home extends Component {
   };
 
   render() {
-    const { numbers, error, amount } = this.state;
+    const { numbers, amount, asc } = this.state;
     const disable = amount > 10000 || amount < 1;
 
     return (
@@ -57,7 +59,7 @@ export default class Home extends Component {
           disable={disable}
         />
         <div className="home-container">
-          <Table numbers={numbers} handleSort={this.handleSort} />
+          <Table numbers={numbers} handleSort={this.handleSort} asc={asc} />
         </div>
       </div>
     );
